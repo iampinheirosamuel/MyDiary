@@ -8,7 +8,7 @@ function nextPage() {
 	}	
 };
 
-let editPost = document.getElementsByClassName('btn');
-editPost.onclick = function () {
+let editPost = document.getElementById('new_button');
+editPost.onclick = function() {
 	window.location = 'edit.html';
-} 
+};
