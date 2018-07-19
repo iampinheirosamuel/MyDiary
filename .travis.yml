@@ -1,1 +1,6 @@
 language: node_js
+deploy:
+  provider: heroku
+  api_key:
+    secure: "6d14b73f-0d87-4354-a222-7dd39360d84d"
+  app: node-mydiary
