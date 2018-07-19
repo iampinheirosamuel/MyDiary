@@ -35,6 +35,19 @@ router.route('/entries').post((req, res) => {
     });
 
 
+// get all entries for MyDiary
+router.route('/entries')
+    .get((req, res) => {
+        if (entries.size !== 0) {
+            return res.status(200).json([...entries]);
+        }
+        return res.status(400).send({
+            Response: 'Bad Request'
+        });
+
+
+    });
+
 // Register Routes
 app.use('/api/v1', router);
 

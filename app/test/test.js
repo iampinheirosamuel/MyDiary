@@ -23,8 +23,8 @@ describe('POST new entries', () => {
         api.post('/entries')
             .set('Accept', 'application/x-www-form-urlencoded')
             .send({
-                name: "First Note",
-                content: "Building a Nodejs API"
+                name: 'First Note',
+                content: 'Building a Nodejs API'
                
             })
             .expect('Content-Type', /json/)
@@ -40,8 +40,8 @@ describe('POST new entries', () => {
         api.post('/entries')
             .set('Accept', 'application/x-www-form-urlencoded')
             .send({
-                name: "Second Note",
-                content: "This is actually fun "
+                name: 'Second Note',
+                content: 'This is actually fun '
 
             })
             .expect('Content-Type', /json/)
@@ -58,7 +58,7 @@ describe('POST new entries', () => {
             .set('Accept', 'application/x-www-form-urlencoded')
             .send({
                 
-                content: "Getting ready for a full ride at Andela "
+                content: 'Getting ready for a full ride at Andela '
 
             })
             .expect('Content-Type', /json/)
@@ -91,7 +91,7 @@ describe('GET all entries', () => {
             .set('Accept', 'application/json')
             .expect(200)
             .end(function (err, res) {
-                expect(typeof res.body).to.equal("object");
+                expect(typeof res.body).to.equal('object');
         
                 done();
             });
@@ -132,8 +132,8 @@ describe('UPDATE an entry', () => {
         api.put('/entries/1')
             .set('Accept', 'application/x-www-form-urlencoded')
             .send({
-                name: "Second Note Updated",
-                content: "Andela is EPIC "
+                name: 'Second Note Updated',
+                content: 'Andela is EPIC '
             })
             .expect(200)
             .end(function (err, res) {
