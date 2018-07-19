@@ -48,6 +48,19 @@ router.route('/entries')
 
     });
 
+// get an entry from MyDiary
+router.route('/entries/:entry_id')
+    .get((req, res) => {
+        if ([...entries][req.params.entry_id]) {
+            return res.status(200).json({
+                entry: [...entries][req.params.entry_id]
+            });
+        }
+        res.status(404).json({
+            Response: 'Not found'
+        });
+    });
+
 // Register Routes
 app.use('/api/v1', router);
 
