@@ -61,6 +61,17 @@ router.route('/entries/:entry_id')
         });
     });
 
+// modify an entry from MyDiary
+router.route('/entries/:entry_id')
+    .put((req, res) => {
+        const editEntry = [...entries][req.params.entry_id];
+        editEntry.name = req.body.name;
+        editEntry.content = req.body.content;
+        res.json({
+            entry: editEntry,
+        });
+    });
+
 // Register Routes
 app.use('/api/v1', router);
 
