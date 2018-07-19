@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
-    "test": "nodemon",
+    "test": "",
     "build": "babel index.js test/test.js -d lib"
   },
   "repository": {
