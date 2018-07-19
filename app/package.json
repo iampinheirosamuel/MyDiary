@@ -2,11 +2,10 @@
   "name": "mydiary",
   "version": "1.0.0",
   "description": "MyDiary is an online journal where users can pen down their thoughts and feelings.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "build": "babel src -d lib",
-    "start": "nodemon app.js"
+    "start": "nodemon",
+    "build": "babel index.js test/test.js -d lib"
   },
   "repository": {
     "type": "git",
@@ -27,12 +26,22 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "eslint": "^5.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^3.2.0",
+    "chai-http": "^1.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.2"
+    "nodemon": "^1.18.2",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
+    "body-parser": "~1.0.1",
+    "chai": "^4.1.2",
     "express": "^4.16.3",
-    "body-parser": "~1.0.1"
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
   }
 }
