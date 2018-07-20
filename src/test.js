@@ -5,7 +5,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var should = require('chai').should();
 var expect = require('chai').expect;
 var supertest = require('supertest');
-api = supertest('http://localhost:8080/api/v1');
+var api = supertest('http://localhost:8080/api/v1');
 
 // this test checks wrong API endpoints from MyDiary
 describe('Checks wrong API endpoints', function () {

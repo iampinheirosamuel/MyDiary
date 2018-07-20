@@ -1,7 +1,7 @@
 const should = require('chai').should();
 const expect = require('chai').expect;
 const supertest = require('supertest');
-    api = supertest('http://localhost:8080/api/v1');
+const api = supertest('http://localhost:8080/api/v1');
 
 
 // this test checks wrong API endpoints from MyDiary
