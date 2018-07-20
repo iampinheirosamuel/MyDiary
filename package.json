@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon",
-    "test": "nyc mocha --require babel-core/register src ",
+    "test": "nyc mocha --require babel-core/register src/test.js ",
     "build": "babel server -d src"
   },
   "repository": {
