@@ -5,8 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon",
-    "test": "  ",
-    "coverage": "nyc report --reporter=text-lcov  | coveralls ",
+    "test": "nyc mocha --require babel-core/register src/test.js  ",
+    "coverage": "nyc report --reporter=text-lcov | coveralls ",
     "lint": "eslint server/index.js"
 
   },
