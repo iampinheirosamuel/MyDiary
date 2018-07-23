@@ -1,27 +1,22 @@
+// import chai from 'chai';
+// import chaiHttp from 'chai-http';
 const should = require('chai').should();
 const expect = require('chai').expect;
 const supertest = require('supertest');
+// import app from '../server/index';
+// app.use(chaiHttp);
 const api = supertest('http://localhost:8080/api/v1');
 
-
 // this test checks wrong API endpoints from MyDiary
-describe('Checks wrong API endpoints', () => {
-    it('it should return a 404 response', (done) => {
-        api.get('/entrieser')
-            .expect(404, done);
-    });
-    it('it should return a 404 response', (done) => {
-        api.get('/entries/entry/6')
-            .expect(404, done);
-    });
-});
+
+
 
 // this test should post a new entry into MyDiary
 describe('POST new entries', () => {
 
     it('It should POST first entry', (done) => {
         api.post('/entries')
-            .set('Accept', 'application/x-www-form-urlencoded')
+            .set('Accept', 'application/x-www-form-urlencoded') 
             .send({
                 name: 'First Note',
                 content: 'Building a Nodejs API'
@@ -57,9 +52,7 @@ describe('POST new entries', () => {
         api.post('/entries')
             .set('Accept', 'application/x-www-form-urlencoded')
             .send({
-                
                 content: 'Getting ready for a full ride at Andela '
-
             })
             .expect('Content-Type', /json/)
             .expect(400)
