@@ -26,6 +26,24 @@ body {
     padding: 20px;
 }
 
+.hero {
+  background: url('../images/pen.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro {
+    width: 30%;
+    padding: 0px 40px 40px;
+    color: #F5F3F2;
+    border-radius: 6px;
+    background: linear-gradient(-170deg, rgb(74, 210, 179), rgba(145, 247, 211, 0.41));
+    margin-top: 30px;
+}
+.intro a{
+  text-align: center;
+  margin-top: 45px;
+}
 .card_profile {
     display: inline-block;
     width: 25%;
@@ -66,6 +84,7 @@ header {
 
 header .logo {
     position: relative; 
+    margin-left: 45px;
   }
 
 header .logo a {
@@ -74,7 +93,7 @@ header .logo a {
 
 header .site-nav {
   margin-top: 14px;
-  padding: 10px 20px;
+  padding: 10px 45px;
   font-size: 14px;
   position: relative;
   float: right;
