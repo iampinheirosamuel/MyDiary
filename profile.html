@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Diary</title>
+  <title>MyDiary</title>
   <link rel="shortcut-icon" href="">
   <link rel="icon" href="https://">
   <link rel="stylesheet" href="css/style.css">
@@ -58,9 +58,11 @@
         
         
         <div class="card details">
-            <div class="content">
-                <h6>User Account</h6>
-                  <br>
+
+            <div class="left">
+                <div class="content">
+                    <h6>User Account</h6>
+                    <br>
                     <div class="form">
 
                         <span>Username</span>
@@ -69,13 +71,37 @@
                         <span>Email</span>
                         <input type="email" id="email" name="email" value="  john@doe.com" placeholder="" required>
                         <br>
-                        
+
 
                     </div>
                     <div>
                         <button type="submit" id="button">Update Profile</button>
                     </div>
+                </div>
             </div>
+
+            <div class="right">
+                <div class="content">
+                    <h6>Set Reminder</h6>
+                    <br>
+                    <div class="form">
+
+                        
+                        <span>Date</span>
+                        <input type="date" name="reminder_date" placeholder="" required>
+                        <br>
+                        <span>Time</span>
+                        <input type="time" value="03:00" name="reminder_time" placeholder="" required>
+                        <br>
+
+                    </div>
+                    <div>
+                        <button type="submit" id="button">submit</button>
+                    </div>
+                </div>
+            </div>
+
+          
         </div>
         
     
