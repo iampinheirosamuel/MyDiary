@@ -1,0 +1,10 @@
+.nyc_output
+node_modules
+server
+src
+test
+.babelrc
+.eslintrc.json
+.travis.yml
+package.json
+package-lock.json 
