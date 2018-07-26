@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import router from './router/router';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -7,8 +8,9 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extende: false }));
 
-// simple express route
-app.get('/', (req, res) => { res.json({ message: 'Hello Sam' }); });
+
+// register routes
+app.use('/api/v1/', router);
 
 app.listen(port);
 export default app;
