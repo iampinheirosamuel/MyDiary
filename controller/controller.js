@@ -24,7 +24,8 @@ class diary {
       entry.created_at = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
       data.push(entry);
       return res.status(201).json({
-        SUCCESS: { response: 'entry added successfully' },
+        RESPONSE: 'entry added successfully',
+        SUCCESS: { entry },
       });
     }
     return res.status(400).send({
@@ -36,6 +37,16 @@ class diary {
     const entry = data[req.params.entry_id];
     if (entry) {
       return res.status(200).json({ SUCCESS: { entry } });
+    }
+    return res.status(404).json({ FAILED: { response: 'entry not found' } });
+  }
+
+  static modifyEntry(req, res) {
+    const editEntry = data[req.params.entry_id];
+    if (editEntry) {
+      editEntry.title = req.body.name;
+      editEntry.content = req.body.content;
+      return res.status(201).json({ SUCCESS: { response: 'entry modified successfully' } });
     }
     return res.status(404).json({ FAILED: { response: 'entry not found' } });
   }

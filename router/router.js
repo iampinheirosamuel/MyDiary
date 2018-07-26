@@ -10,5 +10,6 @@ router.use((req, res, next) => { next(); });
 router.get('/entries', diary.getEntries);
 router.post('/entries/', diary.postEntry);
 router.get('/entries/:entry_id', diary.getEntry);
+router.put('/entries/:entry_id', diary.modifyEntry);
 
 export default router;
