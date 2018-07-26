@@ -19,7 +19,7 @@ class diary {
     const today = new Date();
     const entry = {};
     if (typeof req.body.name === 'string' && typeof req.body.content === 'string') {
-      entry.title = req.body.title;
+      entry.title = req.body.name;
       entry.content = req.body.content;
       entry.created_at = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
       data.push(entry);

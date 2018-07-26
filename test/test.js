@@ -94,7 +94,7 @@ describe('MyDiary Entries', () => {
     });
   });
 
-  describe('PUT modify an entry', () => {
+  describe('DELETE an entry', () => {
     it('It should delete an entry DELETE  /api/v1/entries/entry:id', (done) => {
       chai.request(app)
         .delete('/api/v1/entries/0')
