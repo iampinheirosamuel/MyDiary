@@ -6,7 +6,9 @@ const router = express.Router();
 // middleware to use for all requests
 router.use((req, res, next) => { next(); });
 
-// simple express route
+// express route for API
 router.get('/entries', diary.getEntries);
+// router.get('/entries/:entry_id', diary.getEntry);
+router.post('/entries/', diary.postEntry);
 
 export default router;

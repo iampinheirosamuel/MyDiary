@@ -8,7 +8,6 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extende: false }));
 
-
 // register routes
 app.use('/api/v1/', router);
 
