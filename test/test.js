@@ -15,8 +15,10 @@ describe('MyDiary Entries', () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
-          res.body.should.have.property('SUCCESS');
-          res.body.SUCCESS.should.be.a('object');
+          res.body.should.have.property('status');
+          res.body.should.have.property('message');
+          res.body.should.have.property('data');
+          res.body.data.should.be.a('object');
           done();
         });
     });
@@ -33,9 +35,10 @@ describe('MyDiary Entries', () => {
         .end((err, res) => {
           res.should.have.status(201);
           res.body.should.be.a('object');
-          res.body.should.have.property('SUCCESS');
-          res.body.SUCCESS.should.be.a('object');
-          res.body.RESPONSE.should.be.equal('entry added successfully');
+          res.body.should.have.property('status');
+          res.body.should.have.property('message');
+          res.body.should.have.property('data');
+          res.body.data.should.be.a('object');
           done();
         });
     });
@@ -51,9 +54,10 @@ describe('MyDiary Entries', () => {
         .end((err, res) => {
           res.should.have.status(201);
           res.body.should.be.a('object');
-          res.body.should.have.property('SUCCESS');
-          res.body.SUCCESS.should.be.a('object');
-          res.body.RESPONSE.should.be.equal('entry added successfully');
+          res.body.should.have.property('status');
+          res.body.should.have.property('message');
+          res.body.should.have.property('data');
+          res.body.data.should.be.a('object');
           done();
         });
     });
@@ -66,8 +70,10 @@ describe('MyDiary Entries', () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
-          res.body.should.have.property('SUCCESS');
-          res.body.SUCCESS.should.be.a('object');
+          res.body.should.have.property('status');
+          res.body.should.have.property('message');
+          res.body.should.have.property('data');
+          res.body.data.should.be.a('object');
           done();
         });
     });
@@ -86,9 +92,10 @@ describe('MyDiary Entries', () => {
         .end((err, res) => {
           res.should.have.status(201);
           res.body.should.be.a('object');
-          res.body.should.have.property('SUCCESS');
-          res.body.SUCCESS.should.be.a('object');
-          res.body.SUCCESS.response.should.be.equal('entry modified successfully');
+          res.body.should.have.property('status');
+          res.body.should.have.property('message');
+          res.body.should.have.property('data');
+          res.body.data.should.be.a('object');
           done();
         });
     });
@@ -101,20 +108,12 @@ describe('MyDiary Entries', () => {
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
-          res.body.should.have.property('SUCCESS');
-          res.body.SUCCESS.should.be.a('object');
+          res.body.should.have.property('status');
+          res.body.should.have.property('message');
+          res.body.should.have.property('data');
+          res.body.data.should.be.a('object');
           done();
         });
     });
   });
 });
-
-// describe('MyDiary Users', () => {
-//   it('It should create/sign up a new user  POST /api/v1/user/');
-//   it('It should login a user  POST /api/v1/user/');
-//   it('It should logout a user  POST /api/v1/user/');
-//   it('It should get user profile  GET /api/v1/user/user:id');
-//   it('It should modify user profile PUT /api/v1/user/user:id');
-//   it('It should delete an user DELETE  /api/v1/user/user:id');
-//   it('It should return 404 NOT FOUND for wrong API endpoints  /api/v1/user');
-// });
