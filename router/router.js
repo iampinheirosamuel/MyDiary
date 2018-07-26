@@ -8,7 +8,7 @@ router.use((req, res, next) => { next(); });
 
 // express route for API
 router.get('/entries', diary.getEntries);
-// router.get('/entries/:entry_id', diary.getEntry);
 router.post('/entries/', diary.postEntry);
+router.get('/entries/:entry_id', diary.getEntry);
 
 export default router;

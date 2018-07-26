@@ -32,17 +32,13 @@ class diary {
     });
   }
 
-  // static getEntry(req, res) {
-  //   const entry = data[req.params.entry_id];
-  //   if (entry.length === 0) {
-  //     return res.status(404).json({
-  //       FAILED: { response: 'entry not found', requestedTime: Date.now() },
-  //     });
-  //   }
-  //   return res.status(200).json({
-  //     SUCCESS: { SUCCESS: entry },
-  //   });
-  // }
+  static getEntry(req, res) {
+    const entry = data[req.params.entry_id];
+    if (entry) {
+      return res.status(200).json({ SUCCESS: { entry } });
+    }
+    return res.status(404).json({ FAILED: { response: 'entry not found' } });
+  }
 }
 
 
