@@ -94,7 +94,19 @@ describe('MyDiary Entries', () => {
     });
   });
 
-  it('It should delete an entry DELETE  /api/v1/entries/entry:id');
+  describe('PUT modify an entry', () => {
+    it('It should delete an entry DELETE  /api/v1/entries/entry:id', (done) => {
+      chai.request(app)
+        .delete('/api/v1/entries/0')
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          res.body.should.have.property('SUCCESS');
+          res.body.SUCCESS.should.be.a('object');
+          done();
+        });
+    });
+  });
 });
 
 // describe('MyDiary Users', () => {

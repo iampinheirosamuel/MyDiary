@@ -50,6 +50,15 @@ class diary {
     }
     return res.status(404).json({ FAILED: { response: 'entry not found' } });
   }
+
+  static deleteEntry(req, res) {
+    const entry = data[req.params.entry_id];
+    if (entry) {
+      data.splice(req.params.entry_id, 1);
+      return res.status(200).json({ SUCCESS: { response: 'entry deleted successfully' } });
+    }
+    return res.status(404).json({ FAILED: { response: 'entry not found' } });
+  }
 }
 
 
