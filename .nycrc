@@ -1,0 +1,10 @@
+{
+    "register": "babel-register",
+    "include": [
+      "src/**/*.js",
+      "index.js"
+    ],
+    "all": true,
+    "sourceMap": false,
+    "instrument": false
+  }

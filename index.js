@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import router from './router/router';
+import router from './src/router/router';
 
 const app = express();
 const port = process.env.PORT || 8080;
