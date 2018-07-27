@@ -37,7 +37,7 @@ body {
     padding: 0px 40px 40px;
     color: #F5F3F2;
     border-radius: 6px;
-    background: linear-gradient(-170deg, rgb(74, 210, 179), rgba(145, 247, 211, 0.72));
+    background: linear-gradient(-170deg, rgb(74, 210, 179), rgba(145, 247, 211, 0.92));
     margin-top: 30px;
 }
 .intro a{
@@ -178,6 +178,9 @@ header .site-nav li a:hover {
   box-shadow: 0 2px 5px 0 rgba(223, 223, 223, 0.46), 0 2px 10px 0 rgba(232, 232, 232, 0.8);
 }
 
+#new_btn{
+  margin-left: 16px;
+}
 .app_sign{
     margin: 20px auto;
     border-radius: 5px;   
