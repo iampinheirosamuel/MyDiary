@@ -1,9 +1,6 @@
 language: node_js
 node_js: 
-   -8.11.3
-branches:
-  only:
-  -develop 
+   -8.11.3 
 after_script: npm run coverage
 deploy:
   provider: heroku

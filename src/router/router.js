@@ -14,3 +14,10 @@ router.put('/entries/:entry_id', diary.modifyEntry);
 router.delete('/entries/:entry_id', diary.deleteEntry);
 
 export default router;
+
+
+/** reference
+ *
+ https://expressjs.com
+
+ */
