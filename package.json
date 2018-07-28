@@ -8,33 +8,8 @@
   },
   "scripts": {
     "start": "babel-node index.js --presets es2015",
-    "test:cover": "mocha test/test.js --compilers js:babel-register --exit || true ",
-    "test:watch": "npm run test -- --watch",
-    "test": "nyc npm run test:cover",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "mocha --require babel-register",
     "lint": "eslint index.js"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "env": {
-      "test": {
-        "plugins": [
-          "istanbul"
-        ]
-      }
-    }
-  },
-  "nyc": {
-    "require": [
-      "babel-register"
-    ],
-    "sourceMap": false,
-    "instrument": false,
-    "include": [
-      "src/"
-    ]
   },
   "repository": {
     "type": "git",
@@ -56,14 +31,11 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-plugin-istanbul": "^4.1.6",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
-    "coveralls": "^3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "nyc": "^12.0.2"
+    "eslint-plugin-import": "^2.13.0"
   }
 }

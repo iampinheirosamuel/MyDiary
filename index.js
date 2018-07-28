@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import router from './src/router/router';
+import router from './router/router';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -14,9 +14,3 @@ app.use('/api/v1/', router);
 app.listen(port);
 export default app;
 console.log(`listening on port ${port}`);
-
-/** reference
- *
- https://expressjs.com
-
- */
