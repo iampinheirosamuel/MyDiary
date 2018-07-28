@@ -12,7 +12,7 @@ class diary {
     return res.status(200).json({
       status: 'success',
       message: 'no entries available',
-      data: {},
+      data: { },
     });
   }
 
